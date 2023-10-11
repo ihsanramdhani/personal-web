@@ -18,9 +18,12 @@ body {
 }
 
 .section {
-  /* padding: 15rem 3rem; */
   height: 100vh;
-  background-color: #fd424b;
   color: black;
-  font-size: large  ;
+  font-size: large;
+}
+
+p {
+  background-color: aquamarine;
+  display: inline-block;
 }
