@@ -1,7 +1,5 @@
 'use strict';
 
-// TODO: feature to change highlight colors if user click on body
-
 // default color config
 let numColor = 1;
 
