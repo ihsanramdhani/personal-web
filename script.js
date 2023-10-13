@@ -16,7 +16,6 @@ const img = document.querySelector('img');
 
 header.addEventListener('click', function (e) {
   changeNumColor(numColor);
-  console.log(numColor)
   styleHighlight.innerHTML = `.highlight::after {background-color: var(--color-${numColor})}`;
   img.src = `assets/thinking_${numColor}.svg`;
 });
