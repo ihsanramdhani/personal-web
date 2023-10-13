@@ -4,18 +4,8 @@
 let numColor = 1;
 
 const changeNumColor = function (num) {
-  if (num === 1) {
-    numColor++;
-    return numColor;
-  }
-  if (num === 2) {
-    numColor++;
-    return numColor;
-  }
-  if (num === 3) {
-    numColor = 1;
-    return numColor;
-  }
+  if (num === 1 || num === 2) numColor++;
+  if (num === 3) numColor = 1;
 };
 
 const header = document.querySelector('.header');
@@ -26,6 +16,7 @@ const img = document.querySelector('img');
 
 header.addEventListener('click', function (e) {
   changeNumColor(numColor);
+  console.log(numColor)
   styleHighlight.innerHTML = `.highlight::after {background-color: var(--color-${numColor})}`;
   img.src = `assets/thinking_${numColor}.svg`;
 });
