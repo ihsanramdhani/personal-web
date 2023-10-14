@@ -12,10 +12,11 @@ const header = document.querySelector('.header');
 const styleHighlight = document.head.appendChild(
   document.createElement('style')
 );
-const img = document.querySelector('img');
 
 header.addEventListener('click', function (e) {
   changeNumColor(numColor);
-  styleHighlight.innerHTML = `.highlight::after {background-color: var(--color-${numColor})}`;
-  img.src = `assets/thinking_${numColor}.svg`;
+  styleHighlight.innerHTML = `
+  .highlight::after {background-color: var(--color-${numColor})}
+  .header__img::before {content: var(--svg-${numColor})}
+  `;
 });
