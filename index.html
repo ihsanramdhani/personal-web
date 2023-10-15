@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ihsan's Web</title>
-  <script defer src="script.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap" >
-  <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
-  <div class="header">
-    <div class="nav">Nav is in progress
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ihsan's Web</title>
+    <script defer src="script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="nav">
+        <ul class="nav__links">
+          <li class="nav__item">
+            <a href="" class="nav__link nav__home">Home</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section__projects" class="nav__link nav__projects">Projects</a>
+          </li>
+          <li class="nav__item">
+            <a href="#section__about" class="nav__link nav__about">About</a>
+          </li>
+        </ul>
+      </div>
+      <div class="section__header">
+        <h1>Hello, I'm <span class="highlight">Ihsan Ramdhani</span></h1>
+        <h4>a Software Engineer</h4>
+        <div class="header__img"></div>
+      </div>
     </div>
-    <div class="header__title">
-      <h1>
-        Hello, I'm <span class="highlight">Ihsan Ramdhani</span>
-      </h1>
-      <h4>a Software Engineer</h4>
-      <div class="header__img"></div>
-    </div>
-  </div>
-  <div class="section" id="section--1"><p>Projects Section</p></div>
-</body>
+    <div class="section" id="section__projects"><p>Projects Section</p></div>
+    <div class="section" id="section__about"><p>About Section</p></div>
+  </body>
 </html>

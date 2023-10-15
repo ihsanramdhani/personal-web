@@ -9,6 +9,9 @@ const changeNumColor = function (num) {
 };
 
 const header = document.querySelector('.header');
+const navHome = document.querySelector('.nav__home');
+const navProjects = document.querySelector('.nav__projects');
+const navAbout = document.querySelector('.nav__about');
 const styleHighlight = document.head.appendChild(
   document.createElement('style')
 );
