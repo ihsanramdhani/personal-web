@@ -53,11 +53,13 @@ body {
 h1 {
   font-size: 5.5rem;
   line-height: 1.35;
+  user-select: none;
 }
 
 h4 {
   font-size: 2.4rem;
   font-weight: 500;
+  user-select: none;
 }
 
 .header__img {
@@ -95,7 +97,7 @@ h4 {
   align-items: center;
   height: 9rem;
   width: 100%;
-  padding: 0 3rem;;
+  padding: 0 3rem;
   position: fixed;
   z-index: 100;
   background-color: #f1efef;
@@ -121,11 +123,24 @@ h4 {
 
 /* SECTION */
 .section {
-  height: 100vh;
+  padding-top: 9rem;
   background-color: #f1efef;
-  padding: 20rem;
   font-size: 1.7rem;
   font-weight: 400;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 4rem;
+  margin: 0 12rem;
 }
 
+.section__projects > *,
+.section__about > * {
+  border: 1px solid red;
+  place-self: center;
+  font-size: 2rem;
+}
 
+.section_img {
+  width: 100%;
+}

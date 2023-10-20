@@ -22,8 +22,8 @@ const styleHighlight = document.head.appendChild(
 containerSection.addEventListener('click', function (e) {
   changeNumColor(numColor);
   styleHighlight.innerHTML = `
-  .highlight::after {background-color: var(--color-${numColor})}
   .header__img::before {content: var(--svg-${numColor})}
+  .highlight::after {background-color: var(--color-${numColor})}
   `;
 });
 
