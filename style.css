@@ -24,7 +24,7 @@ body {
   color: #444;
   line-height: 1.9;
   background-color: #f1efef;
-  padding: 0 3rem;
+  /* padding: 0 3rem; */
 }
 
 .header {
@@ -122,7 +122,7 @@ h4 {
 }
 
 /* SECTION */
-.section {
+/* .section {
   padding-top: 9rem;
   background-color: #f1efef;
   font-size: 1.7rem;
@@ -143,4 +143,120 @@ h4 {
 
 .section_img {
   width: 100%;
+} */
+
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+
+/* NEW STYLES */
+
+.home {
+  display: none;
+  gap: 1.5rem;
+  grid-template-areas:
+    'one two two three'
+    'four four five six';
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+  padding-top: 9rem;
+}
+
+.boxes {
+  background-color: #219c90;
+}
+
+.boxes:nth-child(1) {
+  grid-area: one;
+}
+.boxes:nth-child(2) {
+  grid-area: two;
+}
+.boxes:nth-child(3) {
+  grid-area: three;
+}
+.boxes:nth-child(4) {
+  grid-area: four;
+}
+.boxes:nth-child(5) {
+  grid-area: five;
+}
+.boxes:nth-child(6) {
+  grid-area: six;
+}
+
+.projects {
+  display: none;
+  gap: 1.5rem;
+  grid-template-areas:
+    'one two three five'
+    'four six six five'
+    'seven seven eight nine'
+    'ten eleven twelve twelve';
+  width: 100vw;
+  height: 100vw;
+  padding: 3rem;
+  padding-top: 9rem;
+}
+
+.project--boxes {
+  background-color: orchid;
+}
+
+.project--boxes:nth-child(1) {
+  grid-area: one;
+}
+.project--boxes:nth-child(2) {
+  grid-area: two;
+}
+.project--boxes:nth-child(3) {
+  grid-area: three;
+}
+.project--boxes:nth-child(4) {
+  grid-area: four;
+}
+.project--boxes:nth-child(5) {
+  grid-area: five;
+}
+.project--boxes:nth-child(6) {
+  grid-area: six;
+}
+.project--boxes:nth-child(7) {
+  grid-area: seven;
+}
+.project--boxes:nth-child(8) {
+  grid-area: eight;
+}
+.project--boxes:nth-child(9) {
+  grid-area: nine;
+}
+.project--boxes:nth-child(10) {
+  grid-area: ten;
+}
+.project--boxes:nth-child(11) {
+  grid-area: eleven;
+}
+.project--boxes:nth-child(12) {
+  grid-area: twelve;
+}
+
+.about {
+  display: none;
+  gap: 1.5rem;
+  grid-template-areas: 'one two';
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem;
+  padding-top: 9rem;
+}
+
+.about--boxes {
+  background-color: #cd5c08;
+}
+
+.about--boxes:nth-child(1) {
+  grid-area: one;
+}
+.about--boxes:nth-child(2) {
+  grid-area: two;
 }
