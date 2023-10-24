@@ -56,13 +56,19 @@ document.addEventListener('DOMContentLoaded', function () {
   // initial load
   if (window.location.hash) displayPage(window.location.hash.substring(1));
   else displayPage('home');
+});
 
-  // handle navigation clicks
-  links.forEach(link => {
-    const page = link.getAttribute('href').substring(1);
-    link.addEventListener('click', function (e) {
-      e.preventDefault();
-      displayPage(page);
-    });
+// handle navigation clicks
+links.forEach(link => {
+  const page = link.getAttribute('href').substring(1);
+  link.addEventListener('click', function (e) {
+    e.preventDefault();
+    displayPage(page);
+    history.pushState(null, null, `#${page}`);
   });
+});
+
+// handle back and forward navigation
+window.addEventListener('popstate', function () {
+  displayPage(window.location.hash.substring(1) || 'home');
 });
