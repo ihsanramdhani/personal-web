@@ -43,7 +43,7 @@
 // });
 
 const sections = document.querySelectorAll('.section');
-const links = document.querySelectorAll('.nav__link');
+const links = document.querySelectorAll('.nav--link');
 
 const displayPage = function (section) {
   sections.forEach(section => {
