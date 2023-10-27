@@ -3,79 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ihsan's Web</title>
-    <script defer src="script.js"></script>
+    <!-- ================== REMIXICON ================== -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
     />
+
+    <!-- ================== CSS ================== -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ================== JS ================== -->
+    <script defer src="script.js"></script>
+
+    <title>Responsive Web-01</title>
   </head>
   <body>
-    <div class="nav--wrapper">
-      <ul class="nav">
-        <li class="nav--item"><a href="#home" class="nav--link">Home</a></li>
-        <li class="nav--item">
-          <a href="#projects" class="nav--link">Projects</a>
-        </li>
-        <li class="nav--item">
-          <a href="#about" class="nav--link">About</a>
-        </li>
-      </ul>
-    </div>
-    <div class="home section" id="home">
-      <div class="header--wrapper">
-        <div class="header--title">Hello, I'm Ihsan Ramdhani</div>
-        <div class="header--subtitle">I built Responsive Websites</div>
-        <div class="header--img"></div>
-      </div>
-      <div class="quote--wrapper">
-        <div class="quote">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias,
-          ducimus repellendus. Delectus cum veniam nesciunt ullam, ratione earum
-          eligendi perspiciatis non aut illum beatae molestias tenetur
-          excepturi, obcaecati amet placeat nostrum velit at? Iusto nihil eos
-          eius dicta fugiat facilis, tenetur, ab modi ea minima aut optio?
-          Dicta, porro facere.
+    <!-- ================== HEADER ================== -->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">R</span>
+          <span class="nav__logo-name">Rian Lot.</span>
+        </a>
+
+        <div class="nav__menu" id="nav__menu">
+          <span class="nav__title">Menu</span>
+
+          <h3 class="nav__name">Rian</h3>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+          </ul>
+
+          <!-- Close button -->
+          <div class="nav__close" id="nav__close">
+            <i class="ri-close-line"></i>
+          </div>
         </div>
-        <div class="quote">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, non.
+
+        <div class="nav__buttons">
+          <!-- Toggle button -->
+          <div class="nav__toggle" id="nav__toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
         </div>
-      </div>
-      <div class="featured--projects--wrapper">
-        <div class="featured--title">Featured Project</div>
-        <div class="featured--subtitle">Project that I'm proud of</div>
-        <div class="featured--text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
-          veritatis rem harum blanditiis accusamus quod autem similique eligendi
-          exercitationem quis. Amet nihil rerum quibusdam ipsum totam quasi
-          minima cum iusto harum odio dolorem animi, necessitatibus molestias et
-          aperiam consequuntur inventore atque possimus. Odio quidem nostrum
-          optio doloremque adipisci similique sapiente!
-        </div>
-        <div class="featured--img"></div>
-        <div class="featured--button">
-          <a href="#projects">See more projects </a>
-        </div>
-      </div>
-    </div>
-    <div class="projects section" id="projects">
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-      <div class="project--boxes"></div>
-    </div>
-    <div class="about section" id="about">
-      <div class="about--boxes"></div>
-      <div class="about--boxes"></div>
-    </div>
+      </nav>
+    </header>
   </body>
 </html>
