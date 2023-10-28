@@ -9,11 +9,24 @@ navToggle &&
 
 // MENU HIDDEN
 navClose &&
-  navClose.addEventListener('click', () => navMenu.classList.remove('show-menu'));
+  navClose.addEventListener('click', () =>
+    navMenu.classList.remove('show-menu')
+  );
 
 // =============== REMOVE MENU MOBILE ===============
+const navLinks = document.querySelectorAll('.nav__link');
+
+navLinks.forEach(navLink =>
+  navLink.addEventListener('click', () => navMenu.classList.remove('show-menu'))
+);
 
 // =============== SHADOW HEADER ===============
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  this.scrollY >= 50
+    ? header.classList.add('shadow-header')
+    : header.classList.remove('shadow-header');
+});
 
 // =============== EMAIL JS ===============
 
