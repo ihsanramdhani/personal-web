@@ -340,6 +340,7 @@ img {
 .home__img {
   position: relative;
   z-index: 10;
+  background: linear-gradient(to bottom right, #A4A09C, #CCC8C5);
 }
 
 .home__shadow {
