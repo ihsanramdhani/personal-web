@@ -13,9 +13,6 @@
     <!-- ================== CSS ================== -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- ================== JS ================== -->
-    <script defer src="script.js"></script>
-
     <title>Responsive Web-01</title>
   </head>
   <body>
@@ -492,7 +489,7 @@
 
               <div class="contact__box contact__area">
                 <textarea
-                  name="user__message"
+                  name="user_message"
                   id="message"
                   class="contact__input"
                   required
@@ -500,6 +497,8 @@
                 ></textarea>
                 <label for="name" class="contact__label">Message</label>
               </div>
+
+              <p class="contact__message" id="contact-message"></p>
 
               <button type="submit" class="contact__button button">
                 <i class="ri-send-plane-line"></i> Send Message
@@ -526,11 +525,19 @@
               </div>
 
               <div class="contact__social-links">
-                <a href="https://www.linkedin.com/" target="_blank" class="contact__social-link">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  class="contact__social-link"
+                >
                   <i class="ri-linkedin-box-line"></i>
                 </a>
 
-                <a href="https://www.twitter.com" target="_blank" class="contact__social-link">
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  class="contact__social-link"
+                >
                   <i class="ri-twitter-x-line"></i>
                 </a>
               </div>
@@ -549,5 +556,9 @@
     <script src=""></script>
 
     <!-- ================== EMAIL JS ================== -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- ================== MAIN JS ================== -->
+    <script src="script.js"></script>
   </body>
 </html>

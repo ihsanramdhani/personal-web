@@ -29,6 +29,41 @@ window.addEventListener('scroll', () => {
 });
 
 // =============== EMAIL JS ===============
+const contactForm = document.querySelector('.contact__form');
+const contactMessage = document.querySelector('.contact__message');
+
+const sendEmail = e => {
+  e.preventDefault();
+
+  // serviceID - templateID - #form - publicKey
+  emailjs
+    .sendForm(
+      'service_l8un03b',
+      'template_gipc3yr',
+      '#contact-form',
+      'TGtTVq-K1HQy_4PCz'
+    )
+    .then(
+      () => {
+        // show sent message
+        contactMessage.textContent = 'Message sent successfully ✅';
+
+        // remove message after five seconds
+        setTimeout(() => {
+          contactMessage.textContent = '';
+        }, 5000);
+
+        // clear input fields
+        contactForm.reset();
+      },
+      () => {
+        // show error message
+        contactMessage.textContent = 'Message not sent (service error) ❌';
+      }
+    );
+};
+
+contactForm.addEventListener('submit', sendEmail);
 
 // =============== SHOW SCROLL UP ===============
 
