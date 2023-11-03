@@ -113,7 +113,7 @@ const selectedIcon = localStorage.getItem('selected-icon');
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () =>
-  document.body.classList.contains(iconTheme) ? 'ri-sun-line' : 'ri-moon-line';
+  document.body.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
 
 // we validate if the user previously chose a topic
 if (selectedTheme) {
@@ -136,7 +136,5 @@ themeButton.addEventListener('click', () => {
   localStorage.setItem('selected-theme', getCurrentTheme());
   localStorage.setItem('selected-icon', getCurrentIcon());
 });
-
-console.log(localStorage);
 
 // =============== SCROLL REVEAL ANIMATION ===============
