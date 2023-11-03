@@ -107,29 +107,36 @@ const iconTheme = 'ri-sun-line';
 
 // previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selectedIcon');
+const selectedIcon = localStorage.getItem('selected-icon');
 
 // we obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () =>
+  document.body.classList.contains(iconTheme) ? 'ri-sun-line' : 'ri-moon-line';
 
 // we validate if the user previously chose a topic
 if (selectedTheme) {
   // if the validation is fulfiled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+    darkTheme
+  );
+  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](
+    iconTheme
+  );
 }
 
 // activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
   // add or remove the dark / icon theme
-  document.body.classList.toggle(darkTheme)
-  themeButton.classList.toggle(iconTheme)
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
 
   // we save the theme and the current icon that the user chose
-  localStorage.setItem('selected-theme', getCurrentTheme())
-  localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon', getCurrentIcon());
+});
 
+console.log(localStorage);
 
 // =============== SCROLL REVEAL ANIMATION ===============
