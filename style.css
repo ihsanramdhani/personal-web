@@ -665,7 +665,6 @@ button i {
   padding-top: 1.6rem;
 }
 .contact__button {
-  /* background-color: var(--first-color); */
   background-image: linear-gradient(
     to right,
     var(--first-color) 0%,
@@ -675,6 +674,7 @@ button i {
   background-size: 200% auto;
   cursor: pointer;
   transition: 0.5s;
+  color: var(--black-color);
 }
 .contact__button:hover {
   background-position: center right;
