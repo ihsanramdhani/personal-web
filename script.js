@@ -113,7 +113,7 @@ const selectedIcon = localStorage.getItem('selected-icon');
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () =>
-  document.body.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
+  themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line';
 
 // we validate if the user previously chose a topic
 if (selectedTheme) {
@@ -138,3 +138,13 @@ themeButton.addEventListener('click', () => {
 });
 
 // =============== SCROLL REVEAL ANIMATION ===============
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 400,
+})
+
+sr.reveal(`.home__profile, .contact__mail`, {origin: 'right'})
+sr.reveal(`.home__name, .home__info, .contact__data, .contact__social`, {origin: 'left'})
+sr.reveal(`.projects__card`, {interval: 100})
