@@ -143,8 +143,52 @@ const sr = ScrollReveal({
   distance: '60px',
   duration: 2500,
   delay: 400,
-})
+});
 
-sr.reveal(`.home__profile, .contact__mail`, {origin: 'right'})
-sr.reveal(`.home__name, .home__info, .contact__data, .contact__social`, {origin: 'left'})
-sr.reveal(`.projects__card`, {interval: 100})
+sr.reveal(`.home__profile, .contact__mail`, { origin: 'right' });
+sr.reveal(`.home__name, .home__info, .contact__data, .contact__social`, {
+  origin: 'left',
+});
+sr.reveal(`.projects__card`, { interval: 100 });
+
+// =============== CHANGE COLOR IF USER CLICK ON BACKGROUND ===============
+const body = document.querySelector('body');
+const stylesheets = document.styleSheets;
+const root = document.querySelector(':root');
+const firstColor = getComputedStyle(root).getPropertyValue('--first-color');
+console.log(localStorage);
+
+const changeColor = (
+  firstColor,
+  secondColor,
+  darkFirstColor,
+  darkSecondColor
+) => {
+  root.style.setProperty('--first-color', firstColor);
+  root.style.setProperty('--second-color', secondColor);
+  localStorage.setItem('first-color', firstColor);
+  localStorage.setItem('second-color', secondColor);
+
+  for (const stylesheet of stylesheets) {
+    // Loop through the rules in each stylesheet
+    for (const rule of stylesheet.cssRules) {
+      if (rule.selectorText === 'body.dark-theme') {
+        // Found the rule for body.dark-theme, update its properties
+        rule.style.setProperty('--first-color', darkFirstColor);
+        rule.style.setProperty('--second-color', darkSecondColor);
+        localStorage.setItem('dark-first-color', darkFirstColor);
+        localStorage.setItem('dark-second-color', darkSecondColor);
+      }
+    }
+  }
+};
+
+body.addEventListener('click', function (e) {
+  e.target.classList.contains('container') &&
+    changeColor(
+      'hsl(230, 98%, 50%)',
+      'hsl(300, 100%, 50%)',
+      'hsl(230, 80%, 50%)',
+      'hsl(300, 80%, 50%)'
+    );
+});
