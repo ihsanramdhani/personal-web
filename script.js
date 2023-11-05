@@ -200,4 +200,9 @@ body.addEventListener('click', function (e) {
       );
 
   initFirstColor = getComputedStyle(root).getPropertyValue('--first-color');
+  initFirstColor === 'hsl(230, 98%, 50%)'
+    ? (document.querySelector('.home__description b').style.color =
+        'hsl(0, 0%, 95%)')
+    : (document.querySelector('.home__description b').style.color =
+        'hsl(0, 0%, 0%)');
 });
