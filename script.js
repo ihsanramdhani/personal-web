@@ -155,8 +155,7 @@ sr.reveal(`.projects__card`, { interval: 100 });
 const body = document.querySelector('body');
 const stylesheets = document.styleSheets;
 const root = document.querySelector(':root');
-const firstColor = getComputedStyle(root).getPropertyValue('--first-color');
-console.log(localStorage);
+let initFirstColor = getComputedStyle(root).getPropertyValue('--first-color');
 
 const changeColor = (
   firstColor,
@@ -184,11 +183,21 @@ const changeColor = (
 };
 
 body.addEventListener('click', function (e) {
-  e.target.classList.contains('container') &&
-    changeColor(
-      'hsl(230, 98%, 50%)',
-      'hsl(300, 100%, 50%)',
-      'hsl(230, 80%, 50%)',
-      'hsl(300, 80%, 50%)'
-    );
+  initFirstColor === 'hsl(20, 98%, 50%)'
+    ? e.target.classList.contains('container') &&
+      changeColor(
+        'hsl(230, 98%, 50%)',
+        'hsl(300, 100%, 50%)',
+        'hsl(230, 80%, 50%)',
+        'hsl(300, 80%, 50%)'
+      )
+    : e.target.classList.contains('container') &&
+      changeColor(
+        'hsl(20, 98%, 50%)',
+        'hsl(50, 100%, 50%)',
+        'hsl(14, 80%, 50%)',
+        'hsl(38, 80%, 50%)'
+      );
+
+  initFirstColor = getComputedStyle(root).getPropertyValue('--first-color');
 });
