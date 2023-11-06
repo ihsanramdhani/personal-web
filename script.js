@@ -183,15 +183,18 @@ const changeColor = (
 };
 
 body.addEventListener('click', function (e) {
+  // color changes happen only if user click on background (elements that have section and container classes)
   initFirstColor === 'hsl(20, 98%, 50%)'
-    ? e.target.classList.contains('container') &&
+    ? (e.target.classList.contains('section') ||
+        e.target.classList.contains('container')) &&
       changeColor(
         'hsl(230, 98%, 50%)',
         'hsl(300, 100%, 50%)',
         'hsl(230, 80%, 50%)',
         'hsl(300, 80%, 50%)'
       )
-    : e.target.classList.contains('container') &&
+    : (e.target.classList.contains('section') ||
+        e.target.classList.contains('container')) &&
       changeColor(
         'hsl(20, 98%, 50%)',
         'hsl(50, 100%, 50%)',
@@ -200,7 +203,7 @@ body.addEventListener('click', function (e) {
       );
 
   initFirstColor = getComputedStyle(root).getPropertyValue('--first-color');
-  
+
   // change font color of bold element in home description only if dark-theme deactivated
   !body.classList.contains('dark-theme') &&
     (initFirstColor === 'hsl(230, 98%, 50%)'
