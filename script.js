@@ -200,9 +200,12 @@ body.addEventListener('click', function (e) {
       );
 
   initFirstColor = getComputedStyle(root).getPropertyValue('--first-color');
-  initFirstColor === 'hsl(230, 98%, 50%)'
-    ? (document.querySelector('.home__description b').style.color =
-        'hsl(0, 0%, 95%)')
-    : (document.querySelector('.home__description b').style.color =
-        'hsl(0, 0%, 0%)');
+  
+  // change font color of bold element in home description only if dark-theme deactivated
+  !body.classList.contains('dark-theme') &&
+    (initFirstColor === 'hsl(230, 98%, 50%)'
+      ? (document.querySelector('.home__description b').style.color =
+          'hsl(0, 0%, 95%)')
+      : (document.querySelector('.home__description b').style.color =
+          'hsl(0, 0%, 0%)'));
 });
